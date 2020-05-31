@@ -20,7 +20,9 @@ fn main() {
         }
     }
     for (i, x) in s.iter().enumerate() {
-        println!("{}", i);
+        if *x {
+            println!("{}", i);
+        }
     }
 }
 

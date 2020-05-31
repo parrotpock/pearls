@@ -32,6 +32,9 @@ void bitset_destroy(Bitset bs) {
 }
 
 void bitset_setval(Bitset bs, size_t elem, int8_t val) {
+    if(elem >= (8 * bs.size) || elem < 0) {
+        return;
+    }
     assert(elem < (bs.size * 8));
     assert(val == 0 || val == 1);
     // First find the index into the bitarray

@@ -11,7 +11,7 @@
 
 int main(int argc, const char * argv[]) {
     const int vectorSize = 10000000;
-    std::vector<bool> bits(10000000);
+    std::vector<bool> bits(vectorSize);
     std::fstream myfile("/Users/rob/data.txt", std::ios_base::in);
     int32_t i;
     while(myfile >> i) {
